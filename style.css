@@ -86,8 +86,8 @@ h2 {    /* заголовки секций */
 
 /* Изображение в блоке "О нас" */
 .about-image {
-    width: 400px;           /* Ширина изображения */
-    height: 250px;          /* Высота изображения */
+    width: 700px;           /* Ширина изображения */
+    height: 400px;          /* Высота изображения */
     border-radius: 8px;     /* Закругленные углы */
     object-fit: cover;      /* Обрезка изображения по размеру */
     border: 1px solid #ddd; /* Серая рамка */
@@ -104,12 +104,14 @@ p {
     font-size: 1.1rem;      /* Размер шрифта */
     margin-bottom: 1rem;    /* Отступ снизу */
     color: #000;            /* Черный цвет */
+    font-weight: 500;
 }
 
 /* Маркированные списки */
 ul {
     list-style-position: inside; /* Маркеры внутри блока */
     padding-left: 1rem;     /* Отступ слева */
+    font-weight: 500;
 }
 
 li {  /* Элементы списка */
@@ -129,11 +131,13 @@ th, td { /* Ячейки таблицы */
     text-align: left;
     border: 1px solid #ddd;
     color: #000;
+    font-weight: 600;
 }
 
 th { /* Заголовки таблицы */
     background: #f2f2f2;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 footer {  /* Подвал сайта */

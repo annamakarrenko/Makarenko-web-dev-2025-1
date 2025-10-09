@@ -112,6 +112,97 @@
         </section>
     </main>
 
+<section class="order-form">
+    <h2>Сделать заказ</h2>
+    <form method="POST" action="https://httpbin.org/post">
+        <div class="form-grid">
+            <div class="order-block">
+                <h3>Ваш заказ</h3>
+                
+                <label>Суп
+                    <select name="soup" required>
+                        <option value="">-- Выберите суп --</option> 
+                        <option value="gaspacho">Гаспачо</option>
+                        <option value="mushroom_cream">Грибной суп-пюре</option>
+                        <option value="norwegian">Норвежский суп</option>
+                    </select>
+                </label>
+
+                <label>Главное блюдо
+                    <select name="main_course" required>
+                        <option value="">-- Выберите главное блюдо --</option>
+                        <option value="fried_potatoes">Жареная картошка с грибами</option>
+                        <option value="lasagna">Лазанья</option>
+                        <option value="chicken_cutlets">Котлеты из курицы</option>
+                    </select>
+                </label>
+
+                <label>Напиток
+                    <select name="drink" required>
+                        <option value="">-- Выберите напиток --</option>
+                        <option value="orange_juice">Апельсиновый сок</option>
+                        <option value="apple_juice">Яблочный сок</option>
+                        <option value="carrot_juice">Морковный сок</option>
+                    </select>
+                </label>
+
+                <label>Комментарии к заказу
+                    <textarea name="comments" rows="6"></textarea>
+                </label>
+            </div>
+
+            <div class="data-block">
+                <h3>Ваши данные</h3>
+                
+                <label>Имя
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>Email
+                    <input type="email" name="email" required>
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="newsletter" checked>
+                    Получать информацию о скидках и акциях
+                </label>
+
+                <label>Номер телефона
+                    <input type="tel" name="phone" required>
+                </label>
+
+                <label>Адрес доставки
+                    <input type="text" name="address" required>
+                    <small>Доставка осуществляется только по Москве</small>
+                </label>
+
+                <fieldset>
+                    <legend>Время доставки:</legend>
+                    <label class="radio">
+                        <input type="radio" name="delivery_time" value="asap" required>
+                        Как можно скорее
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="delivery_time" value="specific" required>
+                        К указанному времени
+                    </label>
+                    
+                    <label class="time-label">
+                        Укажите время доставки
+                        <input type="time" name="delivery_time_specific" min="07:00" max="23:00" step="300">
+                        <small>Доступное время доставки с 7:00 до 23:00</small>
+                    </label>
+                </fieldset>
+
+                <div class="buttons">
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
     <footer id="contacts">
         <div class="container">
             <div class="contact-info">

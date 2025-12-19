@@ -2,21 +2,6 @@ const API_KEY = '6a48b49a-943d-4bd4-868c-94a15212daff';
 const API_URL = 'https://edu.std-900.ist.mospolytech.ru/labs/api';
 const LOCAL_STORAGE_KEY = 'foodConstructOrder';
 
-let allDishes = [];
-let selectedDishes = {};
-
-function getDishByCategory(category) {}
-function removeDishFromOrder(dishId) {}
-function renderOrderItems() {}
-function updateOrderSummary() {}
-function validateCombo() {}
-function getSelectedCombo() {}
-async function loadAllDishes() {}
-function loadSelectedDishes() {}
-async function submitOrder(event) {}
-function initEventListeners() {}
-async function initOrderPage() {}
-
 function getDishByCategory(category) {
     const selectedIds = Object.keys(selectedDishes);
     for (const dishId of selectedIds) {

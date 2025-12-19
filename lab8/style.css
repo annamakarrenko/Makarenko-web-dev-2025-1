@@ -55,8 +55,8 @@ label {
 }
 
 .dish-card:hover .add-btn {
-    background-color: tomato;
-    color: white;
+    background-color: #d6d3ce;
+    color: #000;
 }
 
 .dish-card img {
@@ -359,7 +359,7 @@ small {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 10000;
 }
 
 .notification {
@@ -398,224 +398,198 @@ small {
     color: white;
 }
 
+.order-composition {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.order-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.order-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.order-item-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.order-item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.order-item-weight {
+    color: #666;
+    font-weight: 500;
+}
+
+.remove-btn {
+    padding: 8px 16px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
+}
+
+.sticky-panel {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    z-index: 1000;
+}
+
+.order-composition {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.order-composition h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+#order-items-list .dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+#order-items-list .dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    min-height: 400px;
+}
+
+#order-items-list .dish-card img {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    height: 180px;
+    object-fit: cover;
+}
+
+#order-items-list .dish-card .price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: -0.3rem;
+    color: #000;
+}
+
+#order-items-list .dish-card .name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+    color: #000;
+}
+
+#order-items-list .dish-card .weight {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#order-items-list .remove-btn {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+#order-items-list .remove-btn:hover {
+    background-color: tomato;
+    color: white;
+}
+
+.empty-order {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.empty-order a {
+    color: tomato;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.empty-order a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 800px) {
-    .dishes-grid {
+    #order-items-list .dishes-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    nav {
-        justify-content: space-between;
+    #order-items-list .dish-card {
+        padding: 20px 25px;
+        min-height: 350px;
     }
     
-    .about-image {
-        width: 500px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr; 
-        gap: 2rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        justify-items: center;
-    }
-    
-    .order-block, .data-block {
-        max-width: 400px;
-        width: 100%;
-        justify-self: center;
-    }
-    
-    .filters {
-        justify-content: center;
-    }
-    
-    .combo-row {
-        grid-template-columns: repeat(3, 180px);
-        gap: 1.5rem;
-    }
-    
-    .combo-item {
-        padding: 1rem;
-    }
-    
-    .combo-dish img {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .combo-dish span {
-        font-size: 0.9rem;
+    #order-items-list .dish-card img {
+        height: 150px;
     }
 }
 
 @media (max-width: 600px) {
-    .form-grid {
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        gap: 1.5rem;
-    }
-
-    .dishes-grid {
+    #order-items-list .dishes-grid {
         grid-template-columns: 1fr;
     }
     
-    h1 {
-        text-align: center;
-    }
-    
-    .header-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .order-block, .data-block {
-        width: 100%;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: calc(1.1rem + 4px);
-    }
-
-    .dishes-section h2 {
-        text-align: center;
-    }
-    
-    .about-image {
-        width: 100%;
-    }
-    
-    table {
-        font-size: 0.9rem;
-    }
-    
-    th, td {
-        padding: 0.5rem;
-    }
-    
-    .filters {
-        justify-content: center;
-    }
-    
-    .filter-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-    
-    .combo-row {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .combo-item {
-        min-width: 200px;
-        padding: 1rem;
-        justify-content: center;
-    }
-    
-    .notification {
-        padding: 1.8rem;
-    }
-    
-    .notification p {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    
-    .order-form {
-        padding: 0.5rem;
-    }
-    
-    .form-grid {
-        padding-left: 0;
-        padding-right: 0;
-        gap: 1rem;
-    }
-    
-    .order-block, .data-block {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 0.25rem;
-    }
-    
-    .checkbox, .radio {
-        font-size: 0.9rem;
-    }
-    
-    input, select, textarea {
-        font-size: 16px; 
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 0;
-    }
-    
-    button {
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .order-form h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    
-    .order-block h3, .data-block h3 {
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    small {
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .dish-card {
+    #order-items-list .dish-card {
         padding: 20px 25px;
+        min-height: 320px;
     }
     
-    .dish-card .price {
-        font-size: 1.2rem;
-    }
-    
-    .dish-card .name {
-        font-size: 1rem;
-    }
-    
-    .add-btn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-    }
-    
-    .combo-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .combo-dish img {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .combo-dish span {
-        font-size: 0.9rem;
+    #order-items-list .dish-card img {
+        height: 140px;
     }
 }
